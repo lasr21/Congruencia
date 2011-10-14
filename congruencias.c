@@ -1,10 +1,13 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <time.h>
+#include stdio.h
+
+int gcd(int a, int b){
+	
+	
+}
 
 int main (){
-	time_t t;
-	printf("Hol");
-	return 0;
+	
+
+
+
 }
