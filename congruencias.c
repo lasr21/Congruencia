@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define NUM 3
 
 int probarDiv(int m, int a){
 	
@@ -28,41 +27,48 @@ int probarSol(int m, int a){
 
 int main (){
 	
-	//meter el input queda pendiente:
+	int NUM=0;
+	int solucion=0;
+	int i,m;
+	m=1;
 
+	printf("Cuantas ecuaciones se van a resolver?\n");
+	scanf("%d",&NUM);
 
-	//resuelve sistemas de ecuaciones de la forma x = a mod b
 	int a[NUM];
 	int b[NUM];
 	int mx[NUM];
-	int solucion;
 
-	a[0]=2;
-	a[1]=3;
-	a[2]=2;
+	printf("Ingresar las ecuaciones de la forma x = a mod b:\n");
 
-	b[0]=3;
-	b[1]=5;
-	b[2]=7;
+	while (i<NUM){
+		
+		printf("a%i: ",i);
+		scanf("%d",&a[i]);
+		printf("b%i: ",i);
+		scanf("%d",&b[i]);
+		printf("x = %d mod %d\n", a[i],b[i]);
+		printf("========\n");
+		i++;
 
-	int i,m;
-	m=1;
+
+	}
+
 	//obtenemos m
 	for(i=0;i<NUM;i++){
 		m*=b[i];
 	}
-	printf("m:%d\n",m);
+	
 	//obtenemos m1, m2, m3...mx
 	for(i=0;i<NUM;i++){
 		mx[i]=m/b[i];
-		printf("m%d:%d\n",i,mx[i]);
 	}
 	for(i=0;i<NUM;i++){
 		solucion += a[i]*mx[i]*probarDiv(mx[i],b[i]); 
 	}
-	printf("Solucion parcial: %d\n",solucion);
+	
 	solucion = probarSol(solucion,m);
-	printf("Solucion final: %d\n",solucion);
+	printf("Solucion: %d\n",solucion);
 
 
 	
