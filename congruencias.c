@@ -29,17 +29,17 @@ int main (){
 	
 	int NUM=0;
 	int solucion=0;
-	int i,m;
+	int i=0,m;
 	m=1;
 
-	printf("Cuantas ecuaciones se van a resolver?\n");
+	printf("Cuantas congruencias se van a resolver?\n");
 	scanf("%d",&NUM);
 
 	int a[NUM];
 	int b[NUM];
 	int mx[NUM];
 
-	printf("Ingresar las ecuaciones de la forma x = a mod b:\n");
+	printf("Ingresar las congruencias de la forma x = a mod b:\n");
 
 	while (i<NUM){
 		
